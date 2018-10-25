@@ -3,7 +3,6 @@ package drawing;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,11 +10,11 @@ import java.util.Iterator;
 /**
  * Created by lewandowski on 20/12/2017.
  */
-public class DrawingPane extends Pane implements java.lang.Iterable<Shape> {
+public class DrawingPane extends Pane implements java.lang.Iterable<Ishape> {
 
     private MouseMoveHandler mouseMoveHandler;
 
-    private ArrayList<Shape> shapes;
+    private ArrayList<Ishape> shapes;
 
     public DrawingPane() {
         clipChildren();
@@ -39,9 +38,9 @@ public class DrawingPane extends Pane implements java.lang.Iterable<Shape> {
         });
     }
 
-    public void addShape(Shape shape) {
+    public void addShape(Ishape shape) {
         shapes.add(shape);
-        this.getChildren().add(shape);
+        shape.addShapeToPane(this);
     }
 
     //public ArrayList<Shape> getShapes() {return shapes;}

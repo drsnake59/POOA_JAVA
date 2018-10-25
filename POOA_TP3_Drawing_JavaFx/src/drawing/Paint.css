@@ -9,12 +9,11 @@
     -fx-background-color: white;
 }
 
-.statutBar{
-    -fx-background-color: white;
+.statutbar {
     -fx-border-style: solid;
-    -fx-border-width: 0px 0px 50px 0px;
+    -fx-border-width: 2px 0px 0px 0px;
+    -fx-border-color: darkgrey;
 }
-
 
 .rectangle {
     -fx-fill: greenyellow;
@@ -32,4 +31,8 @@
     -fx-fill: greenyellow;
     -fx-stroke: green;
     -fx-stroke-width: 3;
+}
+
+.selected{
+    -fx-effect:dropshadow(gaussian,cornflowerblue,8,0.7,0,0);
 }

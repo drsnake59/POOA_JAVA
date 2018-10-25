@@ -12,7 +12,7 @@ public class StatutBar extends HBox implements drawing.Observer {
 
     public StatutBar(DrawingPane drawingPane) {
         this.dp = drawingPane;
-        this.labelForm = new Label("0 shapes(s)");
+        this.labelForm = new Label(dp.getNumberShape()+"shapes(s)");
         this.getChildren().addAll(this.labelForm);
     }
 
